@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<style>
+  table, td, th {
+      border-collapse: collapse;
+      font-family: sans-serif;
+  }
+
+  td, th {
+      border-bottom: 0;
+      padding: 4px
+  }
+
+  tr:nth-child(odd) {
+      background: #eee;
+  }
+
+  tr:nth-child(even) {
+      background: #fff;
+  }
+
+  tr.header {
+      background: navy !important;
+      color: white;
+      font-weight: bold;
+  }
+
+  tr.subheader {
+      background: lightgray !important;
+      color: black;
+  }
+
+  tr.headerLastRow {
+      border-bottom: 2px solid black;
+  }
+
+  th.rowNumber, td.rowNumber {
+      text-align: right;
+  }
+
+</style>
+<body>
+<table>
+  <tr class = "header">
+    <th style = "text-align: right;">subject_id</th>
+    <th style = "text-align: right;">charttime</th>
+    <th style = "text-align: right;">medname</th>
+    <th style = "text-align: right;">dose</th>
+    <th style = "text-align: right;">doseuom</th>
+    <th style = "text-align: right;">solutionname</th>
+    <th style = "text-align: right;">solvolume</th>
+    <th style = "text-align: right;">solunits</th>
+    <th style = "text-align: right;">route</th>
+    <th style = "text-align: right;">stopped</th>
+    <th style = "text-align: right;">caregiverid</th>
+    <th style = "text-align: right;">careunitid</th>
+  </tr>
+  <tr class = "subheader headerLastRow">
+    <th style = "text-align: right;">Int32</th>
+    <th style = "text-align: right;">Dates.DateTime</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">Float64?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">Float64?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">Int32?</th>
+    <th style = "text-align: right;">Int32?</th>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">24396</td>
+    <td style = "text-align: right;">3326-11-10T14:00:00</td>
+    <td style = "text-align: right;">Fentanyl</td>
+    <td style = "text-align: right;">25.0</td>
+    <td style = "text-align: right;">mcghr</td>
+    <td style = "text-align: right;">.9% Normal Saline</td>
+    <td style = "text-align: right;">250.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">IV Drip</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">1710</td>
+    <td style = "text-align: right;">1</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">16894</td>
+    <td style = "text-align: right;">3406-01-24T04:00:00</td>
+    <td style = "text-align: right;">Fentanyl</td>
+    <td style = "text-align: right;">50.0</td>
+    <td style = "text-align: right;">mcghr</td>
+    <td style = "text-align: right;">.9% Normal Saline</td>
+    <td style = "text-align: right;">250.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">IV Drip</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">4489</td>
+    <td style = "text-align: right;">53</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">16805</td>
+    <td style = "text-align: right;">2863-10-03T08:00:00</td>
+    <td style = "text-align: right;">Fentanyl</td>
+    <td style = "text-align: right;">50.0</td>
+    <td style = "text-align: right;">mcghr</td>
+    <td style = "text-align: right;">N/A</td>
+    <td style = "text-align: right;">50.0</td>
+    <td style = "text-align: right;">vl</td>
+    <td style = "text-align: right;">IV Drip</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">865</td>
+    <td style = "text-align: right;">1</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">21280</td>
+    <td style = "text-align: right;">2503-11-28T11:00:00</td>
+    <td style = "text-align: right;">Amiodarone</td>
+    <td style = "text-align: right;">0.5</td>
+    <td style = "text-align: right;">mgmin</td>
+    <td style = "text-align: right;">D5W</td>
+    <td style = "text-align: right;">250.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">IV Drip</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">54</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">17629</td>
+    <td style = "text-align: right;">3381-08-16T06:15:00</td>
+    <td style = "text-align: right;">Heparin</td>
+    <td style = "text-align: right;">1750.0</td>
+    <td style = "text-align: right;">Uhr</td>
+    <td style = "text-align: right;">D5W</td>
+    <td style = "text-align: right;">250.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">IV Drip</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">4183</td>
+    <td style = "text-align: right;">54</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">18248</td>
+    <td style = "text-align: right;">3320-09-26T05:00:00</td>
+    <td style = "text-align: right;">Amiodarone</td>
+    <td style = "text-align: right;">0.5</td>
+    <td style = "text-align: right;">mgmin</td>
+    <td style = "text-align: right;">D5W</td>
+    <td style = "text-align: right;">250.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">IV Drip</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">3119</td>
+    <td style = "text-align: right;">53</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">2114</td>
+    <td style = "text-align: right;">2832-11-17T04:00:00</td>
+    <td style = "text-align: right;">Dobutamine</td>
+    <td style = "text-align: right;">0.0</td>
+    <td style = "text-align: right;">mcgkgmin</td>
+    <td style = "text-align: right;">D5W</td>
+    <td style = "text-align: right;">250.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">IV Drip</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">54</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">13036</td>
+    <td style = "text-align: right;">2616-12-14T15:05:00</td>
+    <td style = "text-align: right;">Propofol</td>
+    <td style = "text-align: right;">20.0</td>
+    <td style = "text-align: right;">mcgkgmin</td>
+    <td style = "text-align: right;">N/A</td>
+    <td style = "text-align: right;">100.0</td>
+    <td style = "text-align: right;">vl</td>
+    <td style = "text-align: right;">IV Drip</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">1470</td>
+    <td style = "text-align: right;">74</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">21684</td>
+    <td style = "text-align: right;">2895-11-01T13:00:00</td>
+    <td style = "text-align: right;">Midazolam</td>
+    <td style = "text-align: right;">7.0</td>
+    <td style = "text-align: right;">mghr</td>
+    <td style = "text-align: right;">.9% Normal Saline</td>
+    <td style = "text-align: right;">50.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">IV Drip</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">2463</td>
+    <td style = "text-align: right;">69</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">24675</td>
+    <td style = "text-align: right;">2920-07-31T08:00:00</td>
+    <td style = "text-align: right;">Natrecor</td>
+    <td style = "text-align: right;">0.02</td>
+    <td style = "text-align: right;">mcgkgmin</td>
+    <td style = "text-align: right;">D5W</td>
+    <td style = "text-align: right;">125.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">IV Drip</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">187</td>
+    <td style = "text-align: right;">1</td>
+  </tr>
+</table>
+</body>
+</html>

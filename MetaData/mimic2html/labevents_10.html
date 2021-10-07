@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<style>
+  table, td, th {
+      border-collapse: collapse;
+      font-family: sans-serif;
+  }
+
+  td, th {
+      border-bottom: 0;
+      padding: 4px
+  }
+
+  tr:nth-child(odd) {
+      background: #eee;
+  }
+
+  tr:nth-child(even) {
+      background: #fff;
+  }
+
+  tr.header {
+      background: navy !important;
+      color: white;
+      font-weight: bold;
+  }
+
+  tr.subheader {
+      background: lightgray !important;
+      color: black;
+  }
+
+  tr.headerLastRow {
+      border-bottom: 2px solid black;
+  }
+
+  th.rowNumber, td.rowNumber {
+      text-align: right;
+  }
+
+</style>
+<body>
+<table>
+  <tr class = "header">
+    <th style = "text-align: right;">subject_id</th>
+    <th style = "text-align: right;">charttime</th>
+    <th style = "text-align: right;">value</th>
+    <th style = "text-align: right;">valuenum</th>
+    <th style = "text-align: right;">valueuom</th>
+    <th style = "text-align: right;">flag</th>
+    <th style = "text-align: right;">fluid</th>
+    <th style = "text-align: right;">category</th>
+    <th style = "text-align: right;">loinc_description</th>
+  </tr>
+  <tr class = "subheader headerLastRow">
+    <th style = "text-align: right;">Int32</th>
+    <th style = "text-align: right;">Dates.DateTime</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">Float64?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">String</th>
+    <th style = "text-align: right;">String</th>
+    <th style = "text-align: right;">String?</th>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">20402</td>
+    <td style = "text-align: right;">3096-11-17T14:20:00</td>
+    <td style = "text-align: right;">ART</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">BLOOD GAS</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">1453</td>
+    <td style = "text-align: right;">2593-04-12T07:45:00</td>
+    <td style = "text-align: right;">0.5</td>
+    <td style = "text-align: right;">0.5</td>
+    <td style = "text-align: right;">mg/dL</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">CHEMISTRY</td>
+    <td style = "text-align: right;">Creatinine [Mass/volume] in Serum or Plasma</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">11581</td>
+    <td style = "text-align: right;">3146-05-14T03:20:00</td>
+    <td style = "text-align: right;">0.86</td>
+    <td style = "text-align: right;">0.86</td>
+    <td style = "text-align: right;">mmol/L</td>
+    <td style = "text-align: right;">abnormal</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">BLOOD GAS</td>
+    <td style = "text-align: right;">Calcium.ionized [Moles/volume] in Blood</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">5532</td>
+    <td style = "text-align: right;">3027-03-19T07:21:00</td>
+    <td style = "text-align: right;">29</td>
+    <td style = "text-align: right;">29.0</td>
+    <td style = "text-align: right;">mm Hg</td>
+    <td style = "text-align: right;">abnormal</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">BLOOD GAS</td>
+    <td style = "text-align: right;">Carbon dioxide [Partial pressure] in Blood</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">14393</td>
+    <td style = "text-align: right;">2998-06-24T05:30:00</td>
+    <td style = "text-align: right;">9.0</td>
+    <td style = "text-align: right;">9.0</td>
+    <td style = "text-align: right;">mg/dL</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">CHEMISTRY</td>
+    <td style = "text-align: right;">Calcium [Mass/volume] in Serum or Plasma</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">2187</td>
+    <td style = "text-align: right;">2768-12-05T03:02:00</td>
+    <td style = "text-align: right;">2.6</td>
+    <td style = "text-align: right;">2.6</td>
+    <td style = "text-align: right;">g/dL</td>
+    <td style = "text-align: right;">abnormal</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">CHEMISTRY</td>
+    <td style = "text-align: right;">Albumin [Mass/volume] in Serum or Plasma</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">6809</td>
+    <td style = "text-align: right;">2526-11-30T09:30:00</td>
+    <td style = "text-align: right;">7.0</td>
+    <td style = "text-align: right;">7.0</td>
+    <td style = "text-align: right;">mg/dL</td>
+    <td style = "text-align: right;">abnormal</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">CHEMISTRY</td>
+    <td style = "text-align: right;">Calcium [Mass/volume] in Serum or Plasma</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">25030</td>
+    <td style = "text-align: right;">2650-10-14T08:30:00</td>
+    <td style = "text-align: right;">17.2</td>
+    <td style = "text-align: right;">17.2</td>
+    <td style = "text-align: right;">%</td>
+    <td style = "text-align: right;">abnormal</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">HEMATOLOGY</td>
+    <td style = "text-align: right;">Erythrocyte distribution width [Ratio]</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">20717</td>
+    <td style = "text-align: right;">2512-12-14T15:28:00</td>
+    <td style = "text-align: right;">11.4</td>
+    <td style = "text-align: right;">11.4</td>
+    <td style = "text-align: right;">g/dL</td>
+    <td style = "text-align: right;">abnormal</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">BLOOD GAS</td>
+    <td style = "text-align: right;">Hemoglobin [Mass/volume] in Blood</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">6726</td>
+    <td style = "text-align: right;">3008-03-22T12:57:00</td>
+    <td style = "text-align: right;">18/</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">BLOOD GAS</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+</table>
+</body>
+</html>

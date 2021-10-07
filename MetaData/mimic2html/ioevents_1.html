@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<style>
+  table, td, th {
+      border-collapse: collapse;
+      font-family: sans-serif;
+  }
+
+  td, th {
+      border-bottom: 0;
+      padding: 4px
+  }
+
+  tr:nth-child(odd) {
+      background: #eee;
+  }
+
+  tr:nth-child(even) {
+      background: #fff;
+  }
+
+  tr.header {
+      background: navy !important;
+      color: white;
+      font-weight: bold;
+  }
+
+  tr.subheader {
+      background: lightgray !important;
+      color: black;
+  }
+
+  tr.headerLastRow {
+      border-bottom: 2px solid black;
+  }
+
+  th.rowNumber, td.rowNumber {
+      text-align: right;
+  }
+
+</style>
+<body>
+<table>
+  <tr class = "header">
+    <th style = "text-align: right;">subject_id</th>
+    <th style = "text-align: right;">charttime</th>
+    <th style = "text-align: right;">label</th>
+    <th style = "text-align: right;">category</th>
+    <th style = "text-align: right;">volume</th>
+    <th style = "text-align: right;">volumeuom</th>
+    <th style = "text-align: right;">unitshung</th>
+    <th style = "text-align: right;">unitshunguom</th>
+    <th style = "text-align: right;">newbottle</th>
+    <th style = "text-align: right;">stopped</th>
+    <th style = "text-align: right;">estimate</th>
+  </tr>
+  <tr class = "subheader headerLastRow">
+    <th style = "text-align: right;">Int32</th>
+    <th style = "text-align: right;">Dates.DateTime</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">Float64?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">Float64?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">Float64?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">String?</th>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">25255</td>
+    <td style = "text-align: right;">3331-09-23T21:00:00</td>
+    <td style = "text-align: right;">Urine Out Foley</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">35.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">4894</td>
+    <td style = "text-align: right;">3299-09-24T05:00:00</td>
+    <td style = "text-align: right;">Urine Out Foley</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">85.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">13890</td>
+    <td style = "text-align: right;">3199-08-19T08:00:00</td>
+    <td style = "text-align: right;">Cerebral Drain R Ventricular Drain</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">18.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">6639</td>
+    <td style = "text-align: right;">2893-07-22T05:00:00</td>
+    <td style = "text-align: right;">D5W 250.0ml + 60mcgkgmin Neosynephrine-k</td>
+    <td style = "text-align: right;">IV Infusions</td>
+    <td style = "text-align: right;">66.3</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">8887</td>
+    <td style = "text-align: right;">3222-04-08T18:00:00</td>
+    <td style = "text-align: right;">.9% Normal Saline 1000.0ml</td>
+    <td style = "text-align: right;">IV Infusions</td>
+    <td style = "text-align: right;">100.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">8066</td>
+    <td style = "text-align: right;">3443-04-07T15:00:00</td>
+    <td style = "text-align: right;">Packed RBC's 375.0ml</td>
+    <td style = "text-align: right;">Tube Feeding</td>
+    <td style = "text-align: right;">125.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">Units</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">5307</td>
+    <td style = "text-align: right;">3501-01-02T01:00:00</td>
+    <td style = "text-align: right;">Urine Out Foley</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">180.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">16370</td>
+    <td style = "text-align: right;">2974-02-28T17:00:00</td>
+    <td style = "text-align: right;">Tube Feeding</td>
+    <td style = "text-align: right;">PO/Gastric</td>
+    <td style = "text-align: right;">40.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">8370</td>
+    <td style = "text-align: right;">3106-08-10T15:00:00</td>
+    <td style = "text-align: right;">Criticare HN 250.0str</td>
+    <td style = "text-align: right;">Tube Feeding</td>
+    <td style = "text-align: right;">40.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">22780</td>
+    <td style = "text-align: right;">3421-02-16T01:00:00</td>
+    <td style = "text-align: right;">D5W 250.0ml + 25000Uhr Heparin</td>
+    <td style = "text-align: right;">IV Infusions</td>
+    <td style = "text-align: right;">5.0</td>
+    <td style = "text-align: right;">ml</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+</table>
+</body>
+</html>

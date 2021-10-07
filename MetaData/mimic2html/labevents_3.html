@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<style>
+  table, td, th {
+      border-collapse: collapse;
+      font-family: sans-serif;
+  }
+
+  td, th {
+      border-bottom: 0;
+      padding: 4px
+  }
+
+  tr:nth-child(odd) {
+      background: #eee;
+  }
+
+  tr:nth-child(even) {
+      background: #fff;
+  }
+
+  tr.header {
+      background: navy !important;
+      color: white;
+      font-weight: bold;
+  }
+
+  tr.subheader {
+      background: lightgray !important;
+      color: black;
+  }
+
+  tr.headerLastRow {
+      border-bottom: 2px solid black;
+  }
+
+  th.rowNumber, td.rowNumber {
+      text-align: right;
+  }
+
+</style>
+<body>
+<table>
+  <tr class = "header">
+    <th style = "text-align: right;">subject_id</th>
+    <th style = "text-align: right;">charttime</th>
+    <th style = "text-align: right;">value</th>
+    <th style = "text-align: right;">valuenum</th>
+    <th style = "text-align: right;">valueuom</th>
+    <th style = "text-align: right;">flag</th>
+    <th style = "text-align: right;">fluid</th>
+    <th style = "text-align: right;">category</th>
+    <th style = "text-align: right;">loinc_description</th>
+  </tr>
+  <tr class = "subheader headerLastRow">
+    <th style = "text-align: right;">Int32</th>
+    <th style = "text-align: right;">Dates.DateTime</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">Float64?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">String</th>
+    <th style = "text-align: right;">String</th>
+    <th style = "text-align: right;">String?</th>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">25550</td>
+    <td style = "text-align: right;">3164-11-03T06:45:00</td>
+    <td style = "text-align: right;">4.2</td>
+    <td style = "text-align: right;">4.2</td>
+    <td style = "text-align: right;">mEq/L</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">CHEMISTRY</td>
+    <td style = "text-align: right;">Potassium [Moles/volume] in Serum or Plasma</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">23706</td>
+    <td style = "text-align: right;">3233-04-01T19:54:00</td>
+    <td style = "text-align: right;">38.3</td>
+    <td style = "text-align: right;">38.3</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">BLOOD GAS</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">3051</td>
+    <td style = "text-align: right;">2879-04-21T17:32:00</td>
+    <td style = "text-align: right;">78</td>
+    <td style = "text-align: right;">78.0</td>
+    <td style = "text-align: right;">mm Hg</td>
+    <td style = "text-align: right;">abnormal</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">BLOOD GAS</td>
+    <td style = "text-align: right;">Oxygen [Partial pressure] in Blood</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">1892</td>
+    <td style = "text-align: right;">2785-07-16T10:45:00</td>
+    <td style = "text-align: right;">7.46</td>
+    <td style = "text-align: right;">7.46</td>
+    <td style = "text-align: right;">units</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">BLOOD GAS</td>
+    <td style = "text-align: right;">pH of Blood</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">20402</td>
+    <td style = "text-align: right;">3096-11-22T03:33:00</td>
+    <td style = "text-align: right;">5.8</td>
+    <td style = "text-align: right;">5.8</td>
+    <td style = "text-align: right;">K/uL</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">HEMATOLOGY</td>
+    <td style = "text-align: right;">Leukocytes [#/volume] in Blood</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">17021</td>
+    <td style = "text-align: right;">2733-10-28T04:59:00</td>
+    <td style = "text-align: right;">32.1</td>
+    <td style = "text-align: right;">32.1</td>
+    <td style = "text-align: right;">pg</td>
+    <td style = "text-align: right;">abnormal</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">HEMATOLOGY</td>
+    <td style = "text-align: right;">Erythrocyte mean corpuscular hemoglobin [Entitic mass]</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">20678</td>
+    <td style = "text-align: right;">3205-09-03T17:54:00</td>
+    <td style = "text-align: right;">17.4</td>
+    <td style = "text-align: right;">17.4</td>
+    <td style = "text-align: right;">sec</td>
+    <td style = "text-align: right;">abnormal</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">HEMATOLOGY</td>
+    <td style = "text-align: right;">Prothrombin time (PT) in Blood by Coagulation assay</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">16200</td>
+    <td style = "text-align: right;">3203-11-11T04:21:00</td>
+    <td style = "text-align: right;">30.3</td>
+    <td style = "text-align: right;">30.3</td>
+    <td style = "text-align: right;">pg</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">HEMATOLOGY</td>
+    <td style = "text-align: right;">Erythrocyte mean corpuscular hemoglobin [Entitic mass]</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">2297</td>
+    <td style = "text-align: right;">3370-07-18T10:00:00</td>
+    <td style = "text-align: right;">25</td>
+    <td style = "text-align: right;">25.0</td>
+    <td style = "text-align: right;">IU/L</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">CHEMISTRY</td>
+    <td style = "text-align: right;">Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">15558</td>
+    <td style = "text-align: right;">3371-04-18T05:15:00</td>
+    <td style = "text-align: right;">85.4</td>
+    <td style = "text-align: right;">85.4</td>
+    <td style = "text-align: right;">%</td>
+    <td style = "text-align: right;">abnormal</td>
+    <td style = "text-align: right;">BLOOD</td>
+    <td style = "text-align: right;">HEMATOLOGY</td>
+    <td style = "text-align: right;">Neutrophils.segmented/100 leukocytes in Blood</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<style>
+  table, td, th {
+      border-collapse: collapse;
+      font-family: sans-serif;
+  }
+
+  td, th {
+      border-bottom: 0;
+      padding: 4px
+  }
+
+  tr:nth-child(odd) {
+      background: #eee;
+  }
+
+  tr:nth-child(even) {
+      background: #fff;
+  }
+
+  tr.header {
+      background: navy !important;
+      color: white;
+      font-weight: bold;
+  }
+
+  tr.subheader {
+      background: lightgray !important;
+      color: black;
+  }
+
+  tr.headerLastRow {
+      border-bottom: 2px solid black;
+  }
+
+  th.rowNumber, td.rowNumber {
+      text-align: right;
+  }
+
+</style>
+<body>
+<table>
+  <tr class = "header">
+    <th style = "text-align: right;">subject_id</th>
+    <th style = "text-align: right;">charttime</th>
+    <th style = "text-align: right;">organism_name</th>
+    <th style = "text-align: right;">antibiotic</th>
+    <th style = "text-align: right;">interpretation</th>
+    <th style = "text-align: right;">isolate_num</th>
+    <th style = "text-align: right;">dilution_amount</th>
+    <th style = "text-align: right;">dilution_comparison</th>
+  </tr>
+  <tr class = "subheader headerLastRow">
+    <th style = "text-align: right;">Int32?</th>
+    <th style = "text-align: right;">Dates.DateTime?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">Float64?</th>
+    <th style = "text-align: right;">String?</th>
+    <th style = "text-align: right;">String?</th>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">1670</td>
+    <td style = "text-align: right;">2548-08-10T03:15:00</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">22783</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">CDC GROUP IIB</td>
+    <td style = "text-align: right;">TRIMETHOPRIM/SULFA</td>
+    <td style = "text-align: right;">S</td>
+    <td style = "text-align: right;">1.0</td>
+    <td style = "text-align: right;">0.5</td>
+    <td style = "text-align: right;"><=        </td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">25140</td>
+    <td style = "text-align: right;">2592-04-08T21:45:00</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">16921</td>
+    <td style = "text-align: right;">2926-06-05T04:15:00</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">1692</td>
+    <td style = "text-align: right;">3336-07-01T01:00:00</td>
+    <td style = "text-align: right;">STAPH AUREUS COAG +</td>
+    <td style = "text-align: right;">OXACILLIN</td>
+    <td style = "text-align: right;">R</td>
+    <td style = "text-align: right;">1.0</td>
+    <td style = "text-align: right;">4</td>
+    <td style = "text-align: right;">=>        </td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">11956</td>
+    <td style = "text-align: right;">3446-12-01T05:00:00</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">14237</td>
+    <td style = "text-align: right;">3135-02-01T10:32:00</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">23873</td>
+    <td style = "text-align: right;">3273-03-12T18:33:00</td>
+    <td style = "text-align: right;">ENTEROBACTER SPECIES</td>
+    <td style = "text-align: right;">PIPERACILLIN</td>
+    <td style = "text-align: right;">S</td>
+    <td style = "text-align: right;">1.0</td>
+    <td style = "text-align: right;">4</td>
+    <td style = "text-align: right;"><=        </td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">3790</td>
+    <td style = "text-align: right;">3220-04-20T15:00:00</td>
+    <td style = "text-align: right;">ESCHERICHIA COLI</td>
+    <td style = "text-align: right;">CIPROFLOXACIN</td>
+    <td style = "text-align: right;">S</td>
+    <td style = "text-align: right;">2.0</td>
+    <td style = "text-align: right;">0.25</td>
+    <td style = "text-align: right;"><=        </td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">9545</td>
+    <td style = "text-align: right;">3186-04-09T09:40:00</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+    <td style = "text-align: right;">missing</td>
+  </tr>
+</table>
+</body>
+</html>
