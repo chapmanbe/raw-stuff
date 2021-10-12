@@ -1,0 +1,31 @@
+entry:
+- fullUrl: resource:0
+  resource:
+    birthDate: '1951-01-20'
+    name:
+    - family: Anyperson
+      given:
+      - Jane
+      - C.
+    resourceType: Patient
+- fullUrl: resource:1
+  resource:
+    lotNumber: '0000020'
+    meta:
+      security:
+      - code: IAL1.2
+        system: https://smarthealth.cards/ial
+    occurrenceDateTime: '2021-02-27'
+    patient:
+      reference: resource:0
+    performer:
+    - actor:
+        display: Hospital in Oceania
+    resourceType: Immunization
+    status: completed
+    vaccineCode:
+      coding:
+      - code: COVAST
+        system: https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats
+resourceType: Bundle
+type: collection
